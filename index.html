@@ -1,0 +1,67 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNav Hub - 精选网址导航</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="WebNav Hub - 发现并访问网络上最受欢迎的网站">
+    <meta name="theme-color" content="#ff5e00">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0ibG9nby1ncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNWUwMCIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjhjNDAiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDIiIGZpbGw9InVybCgjbG9nby1ncmFkaWVudCkiIC8+PHBhdGggZD0iTTM1IDQwIEw2NSA0MCBMNDY1IDYwIEwzNSA2MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIC8+PHBhdGggZD0iTTUwIDMwIEw1MCA3MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIC8+PC9zdmc+">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff5e00" />
+                            <stop offset="100%" stop-color="#ff8c40" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="42" fill="url(#logo-gradient)" />
+                    <path d="M35 40 L65 40 L65 60 L35 60" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    <path d="M50 30 L50 70" stroke="white" stroke-width="6" stroke-linecap="round" />
+                </svg>
+                <div class="title-container">
+                    <h1>WebNav Hub</h1>
+                    <p class="subtitle">发现网络上最优质的网站</p>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="搜索网站...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="category-tabs">
+            <button class="tab" data-category="ai-search">Ai搜索</button>
+            <button class="tab" data-category="social">社交媒体</button>
+            <button class="tab" data-category="tools">实用工具</button>
+            <button class="tab" data-category="tech-news">科技资讯</button>
+            <button class="tab" data-category="cloud-storage">云存储</button>
+            <button class="tab" data-category="email">电子邮箱</button>
+        </div>
+
+        <main id="sites-container">
+            <!-- Website cards will be generated via JavaScript -->
+        </main>
+
+        <footer>
+            <p>&#169; 2023 WebNav Hub | 探索网络精彩内容</p>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to top button -->
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
