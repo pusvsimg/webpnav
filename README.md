@@ -65,6 +65,82 @@ WebNav Hub 是一个精心设计的网址导航平台，旨在帮助用户快速
    - 构建输出目录：/
 3. 部署并通过 Cloudflare 提供的 URL 访问
 
+## 项目结构与自定义指南
+
+### 目录结构
+
+```
+.
+├── index.html      # 主页面HTML文件
+├── styles.css      # 样式表文件
+├── script.js       # JavaScript脚本文件
+├── demo.png        # 界面预览图
+└── README.md       # 项目说明文档
+```
+
+### 文件说明
+
+- `index.html`: 包含网站的基本结构和网站分类数据
+- `styles.css`: 定义网站的样式，包括主题切换、响应式布局等
+- `script.js`: 实现搜索、分类跳转、主题切换等功能
+
+### 自定义修改指南
+
+#### 添加新的网站分类
+
+1. 在`index.html`中找到`<main>`标签内的内容
+2. 参考现有分类格式，添加新的分类区块：
+
+```html
+<section class="category" id="新分类ID">
+    <h2>新分类名称</h2>
+    <div class="site-grid">
+        <!-- 在这里添加网站卡片 -->
+    </div>
+</section>
+```
+
+3. 在顶部导航栏添加对应的分类链接：
+
+```html
+<a href="#新分类ID" class="nav-link">新分类名称</a>
+```
+
+#### 添加或删除网站链接
+
+1. 在对应分类的`<div class="site-grid">`中添加或删除网站卡片：
+
+```html
+<a href="https://example.com" class="site-card" target="_blank">
+    <i class="fa-solid fa-icon"></i>
+    <h3>网站名称</h3>
+    <p>网站描述</p>
+</a>
+```
+
+2. 图标可以从 [Font Awesome](https://fontawesome.com/icons) 选择合适的图标类名
+
+#### 自定义样式
+
+1. 主题颜色：修改`styles.css`中的CSS变量
+```css
+:root {
+    --primary-color: #ff5e00;
+    --gradient-start: #ff5e00;
+    --gradient-end: #ff8c40;
+}
+```
+
+2. 卡片样式：修改`.site-card`相关的CSS规则
+3. 响应式布局：调整媒体查询中的断点和样式
+
+### 开发建议
+
+1. 保持分类ID的唯一性
+2. 确保添加的链接使用HTTPS协议
+3. 为每个网站提供简明的描述
+4. 测试深色模式下的显示效果
+
 ## 贡献指南
 
 欢迎提交Issue和Pull Request来帮助改进项目。
